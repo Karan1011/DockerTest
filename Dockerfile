@@ -1,4 +1,4 @@
-# Use an official PHP runtime as a parent image
+# Use an official PHP runtime as a parent image for the builder stage
 FROM php:7.4-apache AS builder
 
 # Set the working directory to /var/www/html
