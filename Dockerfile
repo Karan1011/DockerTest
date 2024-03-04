@@ -1,5 +1,5 @@
 # Use an official PHP runtime as a parent image
-FROM php:7.4-apache
+FROM php:7.4-apache AS builder
 
 # Set the working directory to /var/www/html
 WORKDIR /var/www/html
@@ -21,7 +21,13 @@ RUN apt-get update \
 RUN composer install
 
 # Install Node.js dependencies
-RUN npm insall
+RUN npm install
+
+# Build the final image
+FROM php:7.4-apache
+
+# Copy only the necessary files from the builder image
+COPY --from=builder /var/www/html /var/www/html
 
 # Expose port 80 to the outside world
 EXPOSE 80
