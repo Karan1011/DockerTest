@@ -31,4 +31,4 @@ jobs:
           context: .
           push: true
           tags: |
-            your-docker-hub-username/your-repository-name:latest
+            karansatyani/dockertest:latest
