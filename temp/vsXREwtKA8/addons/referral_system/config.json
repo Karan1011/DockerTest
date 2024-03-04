@@ -1,0 +1,73 @@
+{
+    "name" : "Referral System",
+    "unique_identifier" : "referral_system",
+    "version" : "1.0",
+    "minimum_item_version" : "3.3",
+    "addon_banner" : "referral_banner.png",
+    "directory" :
+    [
+        {
+          "name" : [
+            "resources/views/addons/referral_system",
+            "resources/views/addons/referral_system/frontend"
+          ]
+        }
+    ],
+
+    "sql_file"  : "",
+    "files"     :
+    [
+        {
+            "root_directory"    : "addons/referral_system/assets/referral_banner.png",
+            "update_directory"  : "public/referral_banner.png"
+        },
+        {
+            "root_directory"    : "addons/referral_system/controllers/ReferralSystemController.php",
+            "update_directory"  : "app/Http/Controllers/ReferralSystemController.php"
+        },
+        {
+            "root_directory"    : "addons/referral_system/controllers/WalletWithdrawRequestController.php",
+            "update_directory"  : "app/Http/Controllers/WalletWithdrawRequestController.php"
+        },
+        {
+            "root_directory"    : "addons/referral_system/models/WalletWithdrawRequest.php",
+            "update_directory"  : "app/Models/WalletWithdrawRequest.php"
+        },
+        {
+            "root_directory"    : "addons/referral_system/routes/referral.php",
+            "update_directory"  : "routes/referral.php"
+        },
+        {
+            "root_directory"    : "addons/referral_system/views/referral_system/frontend/my_referral_earnings.blade.php",
+            "update_directory"  : "resources/views/addons/referral_system/frontend/my_referral_earnings.blade.php"
+        },
+        {
+            "root_directory"    : "addons/referral_system/views/referral_system/frontend/referred_users.blade.php",
+            "update_directory"  : "resources/views/addons/referral_system/frontend/referred_users.blade.php"
+        },
+        {
+            "root_directory"    : "addons/referral_system/views/referral_system/frontend/wallet_withdraw_request_history.blade.php",
+            "update_directory"  : "resources/views/addons/referral_system/frontend/wallet_withdraw_request_history.blade.php"
+        },
+        {
+            "root_directory"    : "addons/referral_system/views/referral_system/referal_earnings.blade.php",
+            "update_directory"  : "resources/views/addons/referral_system/referal_earnings.blade.php"
+        },
+        {
+            "root_directory"    : "addons/referral_system/views/referral_system/referral_users.blade.php",
+            "update_directory"  : "resources/views/addons/referral_system/referral_users.blade.php"
+        },
+        {
+            "root_directory"    : "addons/referral_system/views/referral_system/set_referral_commission.blade.php",
+            "update_directory"  : "resources/views/addons/referral_system/set_referral_commission.blade.php"
+        },
+        {
+            "root_directory"    : "addons/referral_system/views/referral_system/wallet_withdraw_request_details_modal.blade.php",
+            "update_directory"  : "resources/views/addons/referral_system/wallet_withdraw_request_details_modal.blade.php"
+        },
+        {
+            "root_directory"    : "addons/referral_system/views/referral_system/wallet_withdraw_requests.blade.php",
+            "update_directory"  : "resources/views/addons/referral_system/wallet_withdraw_requests.blade.php"
+        }
+    ]
+}

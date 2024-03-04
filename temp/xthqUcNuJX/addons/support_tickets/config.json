@@ -1,0 +1,107 @@
+{
+    "name" : "Support Ticket",
+    "unique_identifier" : "support_tickets",
+    "version" : "1.0",
+    "minimum_item_version" : "1.0",
+    "addon_banner" : "support_ticket.jpg",
+    "directory" :
+    [
+        {
+          "name" : [
+            "resources/views/addons/support_ticket",
+            "resources/views/addons/support_ticket/frontend",
+            "resources/views/addons/support_ticket/support_categories",
+            "resources/views/addons/support_ticket/support_tickets"
+
+          ]
+        }
+    ],
+
+    "sql_file"  : "",
+
+    "files"     :
+    [
+        {
+            "root_directory"    : "addons/support_tickets/assets/support_ticket.jpg",
+            "update_directory"  : "public/support_ticket.jpg"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/controllers/SupportCategoryController.php",
+            "update_directory"  : "app/Http/Controllers/SupportCategoryController.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/controllers/SupportTicketController.php",
+            "update_directory"  : "app/Http/Controllers/SupportTicketController.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/models/SupportCategory.php",
+            "update_directory"  : "app/Models/SupportCategory.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/models/SupportTicket.php",
+            "update_directory"  : "app/Models/SupportTicket.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/models/SupportTicketReply.php",
+            "update_directory"  : "app/Models/SupportTicketReply.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/routes/support_tickets.php",
+            "update_directory"  : "routes/support_tickets.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/views/support_ticket/frontend/support_ticket_create_success.blade.php",
+            "update_directory"  : "resources/views/addons/support_ticket/frontend/support_ticket_create_success.blade.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/views/support_ticket/frontend/support_ticket_create.blade.php",
+            "update_directory"  : "resources/views/addons/support_ticket/frontend/support_ticket_create.blade.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/views/support_ticket/frontend/support_ticket_history.blade.php",
+            "update_directory"  : "resources/views/addons/support_ticket/frontend/support_ticket_history.blade.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/views/support_ticket/frontend/support_ticket_show.blade.php",
+            "update_directory"  : "resources/views/addons/support_ticket/frontend/support_ticket_show.blade.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/views/support_ticket/support_categories/edit.blade.php",
+            "update_directory"  : "resources/views/addons/support_ticket/support_categories/edit.blade.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/views/support_ticket/support_categories/index.blade.php",
+            "update_directory"  : "resources/views/addons/support_ticket/support_categories/index.blade.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/views/support_ticket/support_tickets/active_tickets.blade.php",
+            "update_directory"  : "resources/views/addons/support_ticket/support_tickets/active_tickets.blade.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/views/support_ticket/support_tickets/edit.blade.php",
+            "update_directory"  : "resources/views/addons/support_ticket/support_tickets/edit.blade.php"
+        },
+
+        {
+            "root_directory"    : "addons/support_tickets/views/support_ticket/support_tickets/my_tickets.blade.php",
+            "update_directory"  : "resources/views/addons/support_ticket/support_tickets/my_tickets.blade.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/views/support_ticket/support_tickets/no_ticket.blade.php",
+            "update_directory"  : "resources/views/addons/support_ticket/support_tickets/no_ticket.blade.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/views/support_ticket/support_tickets/show.blade.php",
+            "update_directory"  : "resources/views/addons/support_ticket/support_tickets/show.blade.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/views/support_ticket/support_tickets/solved_ticket.blade.php",
+            "update_directory"  : "resources/views/addons/support_ticket/support_tickets/solved_ticket.blade.php"
+        },
+        {
+            "root_directory"    : "addons/support_tickets/views/support_ticket/default_ticket_assigned_agent.blade.php",
+            "update_directory"  : "resources/views/addons/support_ticket/default_ticket_assigned_agent.blade.php"
+        }
+
+    ]
+}
