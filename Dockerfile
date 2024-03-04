@@ -18,10 +18,10 @@ RUN apt-get update \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Install PHP dependencies
-RUN composer update
+RUN composer install
 
 # Install Node.js dependencies
-RUN npm update
+RUN npm insall
 
 # Expose port 80 to the outside world
 EXPOSE 80
