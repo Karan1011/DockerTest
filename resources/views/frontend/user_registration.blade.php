@@ -14,7 +14,7 @@
 						</div>
 						<form class="form-default" id="reg-form" role="form" action="{{ route('register') }}" method="POST">
 							@csrf
-							<div class="row">
+							<!-- <div class="row">
 								<div class="col-lg-12">
 									<div class="form-group mb-3">
 										<label class="form-label" for="on_behalf">{{ translate('On Behalf') }}</label>
@@ -29,7 +29,7 @@
 										@enderror
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<div class="row">
 						        <div class="col-lg-6">
 						            <div class="form-group mb-3">
@@ -245,7 +245,7 @@
 			});
 		},
         separateDialCode: true,
-        utilsScript: "{{ static_asset('assets/js/intlTelutils.js') }}?1590403638580",
+        utilsScript: "{{ asset('assets/js/intlTelutils.js') }}?1590403638580",
         onlyCountries: @php echo json_encode(\App\Models\Country::where('status', 1)->pluck('code')->toArray()) @endphp,
         customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
             if(selectedCountryData.iso2 == 'bd'){

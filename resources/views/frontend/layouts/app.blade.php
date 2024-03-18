@@ -61,11 +61,14 @@ $lang = \App\Models\Language::where('code', $locale)->first();
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap">
-    <link rel="stylesheet" href="{{ static_asset('assets/css/vendors.css') }}">
-    <link rel="stylesheet" href="{{ static_asset('assets/css/aiz-core.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset('assets/css/vendors.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/aiz-core.css') }}"> -->
+    <link rel="stylesheet" href="{{ asset('assets/css/vendors.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/aiz-core.css') }}">
+    
 
     @if(\App\Models\Language::where('code', Session::get('locale', Config::get('app.locale')))->first()->rtl == 1)
-    <link rel="stylesheet" href="{{ static_asset('assets/css/bootstrap-rtl.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-rtl.min.css') }}">
     @endif
 
     <script>
@@ -223,8 +226,12 @@ $lang = \App\Models\Language::where('code', $locale)->first();
     </div>
     @endif
 
-    <script src="{{ static_asset('assets/js/vendors.js') }}"></script>
-    <script src="{{ static_asset('assets/js/aiz-core.js') }}"></script>
+    <!-- <script src="{{ asset('assets/js/vendors.js') }}"></script> -->
+    <!-- <script src="{{ asset('assets/js/aiz-core.js') }}"></script> -->
+
+    <script src="{{ asset('assets/js/vendors.js') }}"></script>
+    <script src="{{ asset('assets/js/aiz-core.js') }}"></script>
+
 
     @yield('script')
 

@@ -39,9 +39,9 @@
 				@if($profile_picture_show == 'ok')
 				src="{{ uploaded_asset($member->photo) }}"
 				@else
-				src="{{ static_asset('assets/img/avatar-place.png') }}"
+				src="{{ asset('assets/img/avatar-place.png') }}"
 				@endif
-				onerror="this.onerror=null;this.src='{{ static_asset('assets/img/avatar-place.png') }}';"
+				onerror="this.onerror=null;this.src='{{ asset('assets/img/avatar-place.png') }}';"
 				class="img-fit mw-100 h-400px"
 		>
 

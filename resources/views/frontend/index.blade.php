@@ -30,7 +30,7 @@
 								</div>
 		    					<form class="form-default" id="reg-form" role="form" action="{{ route('register') }}" method="POST">
 									@csrf
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-lg-12">
 											<div class="form-group mb-3">
 												<label class="form-label" for="on_behalf">{{ translate('On Behalf') }}</label>
@@ -45,7 +45,7 @@
 												@enderror
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<div class="row">
 								        <div class="col-lg-6">
 								            <div class="form-group mb-3">
@@ -300,7 +300,7 @@
                 <div class="col-xl col-md-6">
                     <div class="mb-3">
                         <a href="{{ json_decode(get_setting('home_banner1_links'), true)[$key] }}" class="d-block text-reset">
-                            <img src="{{ static_asset('assets/img/placeholder-rect.jpg') }}" data-src="{{ uploaded_asset($banner_1_imags[$key]) }}" alt="{{ env('APP_NAME') }}" class="img-fluid lazyload w-100">
+                            <img src="{{ asset('assets/img/placeholder-rect.jpg') }}" data-src="{{ uploaded_asset($banner_1_imags[$key]) }}" alt="{{ env('APP_NAME') }}" class="img-fluid lazyload w-100">
                         </a>
                     </div>
                 </div>
@@ -601,7 +601,7 @@
 			});
 		},
         separateDialCode: true,
-        utilsScript: "{{ static_asset('assets/js/intlTelutils.js') }}?1590403638580",
+        utilsScript: "{{ asset('assets/js/intlTelutils.js') }}?1590403638580",
         onlyCountries: @php echo json_encode(\App\Models\Country::where('status', 1)->pluck('code')->toArray()) @endphp,
         customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
             if(selectedCountryData.iso2 == 'bd'){

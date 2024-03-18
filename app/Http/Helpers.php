@@ -11,6 +11,7 @@ use App\Models\SmsTemplate;
 use App\Models\Notification;
 use App\User;
 use App\Utility\MimoUtility;
+use Illuminate\Support\Facades\Auth;
 use Twilio\Rest\Client;
 
 if (!function_exists('site_url')) {
@@ -37,7 +38,7 @@ if (!function_exists('uploaded_asset')) {
     function uploaded_asset($id)
     {
         if (($asset = \App\Upload::find($id)) != null) {
-            return static_asset($asset->file_name);
+            return asset($asset->file_name);
         }
         return null;
     }
@@ -50,8 +51,8 @@ if (!function_exists('uploaded_asset')) {
  * @param  bool|null  $secure
  * @return string
  */
-if (! function_exists('static_asset')) {
-    function static_asset($path, $secure = null)
+if (! function_exists('asset')) {
+    function asset($path, $secure = null)
     {
         if(env('FILESYSTEM_DRIVER') == 's3'){
             return Storage::disk('s3')->url($path);
@@ -613,7 +614,7 @@ if (!function_exists('app_timezone')) {
 }
 
 function hex2rgba($color, $opacity = false) {
-    return Colorcodeconverter::convertHexToRgba($color, $opacity);
+    // return Colorcodeconverter::convertHexToRgba($color, $opacity);
 }
 
 ?>

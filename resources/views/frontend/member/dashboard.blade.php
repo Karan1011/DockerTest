@@ -1,6 +1,10 @@
+<h1>Hello</h1>
+
 @extends('frontend.layouts.member_panel')
 @section('panel_content')
     @php $user = Auth::user(); @endphp
+
+   
     <div class="row gutters-5">
         <div class="col-md-4 mx-auto mb-3" >
             <div class="bg-light rounded overflow-hidden text-center p-3">
@@ -9,6 +13,7 @@
                 <div class="opacity-50">{{ translate('Remaining Interest') }}</div>
             </div>
         </div>
+        
         <div class="col-md-4 mx-auto mb-3" >
             <div class="bg-light rounded overflow-hidden text-center p-3">
                 <i class="las la-phone la-3x mb-3 text-primary-grad"></i>
@@ -31,11 +36,15 @@
                 <div class="card-header">
                     <h2 class="fs-16 mb-0">{{  translate('Current package') }}</h2>
                 </div>
+              
                 <div class="card-body">
                     <div class="text-center mb-4 mt-3">
+                      
                         <img class="mw-100 mx-auto mb-4" src="{{ uploaded_asset($user->member->package->image) }}" height="130">
+                        
                         <h5 class="mb-3 h5 fw-600">{{$user->member->package->name}}</h5>
                     </div>
+                    
                     <ul class="list-group list-group-raw fs-15 mb-4 pb-4 border-bottom">
                         <li class="list-group-item py-2">
                             <i class="las la-check text-success mr-2"></i>
@@ -71,6 +80,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
@@ -103,9 +113,9 @@
                                         @if($profile_picture_show == 'ok')
                                         src="{{ uploaded_asset($similar_profile->matched_profile->photo) }}"
                                         @else
-                                        src="{{ static_asset('assets/img/avatar-place.png') }}"
+                                        src="{{ asset('assets/img/avatar-place.png') }}"
                                         @endif
-                                        onerror="this.onerror=null;this.src='{{ static_asset('assets/img/avatar-place.png') }}';"
+                                        onerror="this.onerror=null;this.src='{{ asset('assets/img/avatar-place.png') }}';"
                                         class="img-fit w-100 size-100px"
                                     >
                                 </div>

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 Route::group(['prefix' => 'support'], function(){
 
 	Route::resource('support-tickets','SupportTicketController');

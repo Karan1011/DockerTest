@@ -1,0 +1,29 @@
+version: '3'
+services:
+  web:
+    build: .
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 80:80
+  db:
+    image: mysql:latest
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=fqakK96sQaFu
+      - MYSQL_DATABASE=blog
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=admin@123
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - ./config.user.inc.php:/etc/phpmyadmin/config.user.inc.php:ro
+    environment:
+      - PMA_HOST=db
+
+volumes:
+  db_data:

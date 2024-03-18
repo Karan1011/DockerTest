@@ -42,9 +42,9 @@
                                                 @if($profile_picture_show == 'ok')
                                                 src="{{ uploaded_asset($user->photo) }}"
                                                 @else
-                                                src="{{ static_asset('assets/img/avatar-place.png') }}"
+                                                src="{{ asset('assets/img/avatar-place.png') }}"
                                                 @endif
-                                                onerror="this.onerror=null;this.src='{{ static_asset('assets/img/avatar-place.png') }}';"
+                                                onerror="this.onerror=null;this.src='{{ asset('assets/img/avatar-place.png') }}';"
                                                 class="img-fit mw-100 size-150px size-md-250px rounded-circle md-rounded-0"
                                             >
                                         </div>

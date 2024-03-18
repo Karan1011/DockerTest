@@ -7,6 +7,7 @@ use App\User;
 use App\Subscriber;
 use Mail;
 use App\Mail\EmailManager;
+// use Illuminate\Support\Facades\Mail;
 
 class NewsletterController extends Controller
 {
@@ -33,7 +34,7 @@ class NewsletterController extends Controller
                     $array['content'] = $request->content;
 
                     try {
-                        Mail::to($email)->queue(new EmailManager($array));
+                        mail::to($email)->queue(new EmailManager($array));
                     } catch (\Exception $e) {
                         //dd($e);
                     }
@@ -50,6 +51,17 @@ class NewsletterController extends Controller
     }
 
     public function testEmail(Request $request){
+        // $array['view'] = 'emails.newsletter';
+        // $array['subject'] = "SMTP Test";
+        // $array['from'] = env('MAIL_USERNAME');
+        // $array['content'] = "This is a test email.";
+
+        // try {
+        //     Mail::to($request->email)->queue(new EmailManager($array));
+        // } catch (\Exception $e) {
+        //     dd($e);
+        // }
+
         $array['view'] = 'emails.newsletter';
         $array['subject'] = "SMTP Test";
         $array['from'] = env('MAIL_USERNAME');
@@ -57,6 +69,7 @@ class NewsletterController extends Controller
 
         try {
             Mail::to($request->email)->queue(new EmailManager($array));
+            // Mail::send($request->email)->queue(new EmailManager($array));
         } catch (\Exception $e) {
             dd($e);
         }

@@ -12,6 +12,7 @@
 */
 
 
+use Illuminate\Support\Facades\Route;
 
 //Admin
 Route::group(['prefix' =>'admin', 'middleware' => ['auth', 'admin']], function(){

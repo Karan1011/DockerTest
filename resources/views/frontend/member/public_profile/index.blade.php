@@ -137,9 +137,9 @@
                             @if($profile_picture_show == 'ok')
                             src="{{ uploaded_asset($user->photo) }}"
                             @else
-                            src="{{ static_asset('assets/img/avatar-place.png') }}"
+                            src="{{ asset('assets/img/avatar-place.png') }}"
                             @endif
-                            onerror="this.onerror=null;this.src='{{ static_asset('assets/img/avatar-place.png') }}';"
+                            onerror="this.onerror=null;this.src='{{ asset('assets/img/avatar-place.png') }}';"
                             class="img-fluid w-100"
                         >
                     </div>
@@ -217,7 +217,7 @@
                                       <div class="col-auto w-120px">
                                           <img
                                               src="{{ uploaded_asset($similar_profile->matched_profile->photo) }}"
-                                              onerror="this.onerror=null;this.src='{{ static_asset('assets/img/avatar-place.png') }}';"
+                                              onerror="this.onerror=null;this.src='{{ asset('assets/img/avatar-place.png') }}';"
                                               class="img-fit w-100 size-120px"
                                           >
                                       </div>
@@ -269,7 +269,7 @@
                 <div class="overflow-hidden rounded shadow-lg mb-4 bg-white d-xl-none">
                     <img
                         src="{{ uploaded_asset($user->photo) }}"
-                        onerror="this.onerror=null;this.src='{{ static_asset('assets/img/avatar-place.png') }}';"
+                        onerror="this.onerror=null;this.src='{{ asset('assets/img/avatar-place.png') }}';"
                         class="img-fluid w-100"
                     >
                 </div>

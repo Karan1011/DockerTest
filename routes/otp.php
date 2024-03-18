@@ -11,6 +11,7 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
 
 //Verofocation phone
 Route::get('/verification', 'OTPVerificationController@verification')->name('verification');

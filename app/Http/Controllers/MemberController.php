@@ -23,8 +23,7 @@ use Redirect;
 use Auth;
 use App\Utility\EmailUtility;
 use App\Utility\SmsUtility;
-
-
+use Illuminate\Support\Facades\Auth as FacadesAuth;
 
 class MemberController extends Controller
 {

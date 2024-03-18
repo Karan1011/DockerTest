@@ -18,6 +18,7 @@ use App\Models\IgnoredUser;
 use App\Models\ProfileMatch;
 use Hash;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth as FacadesAuth;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 
@@ -30,7 +31,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -124,8 +125,9 @@ class HomeController extends Controller
 
     public function dashboard()
     {
+        // die(Auth::user()->user_type);
         if(Auth::user()->user_type == 'member'){
-
+            
             $similar_profiles = ProfileMatch::orderBy('match_percentage', 'desc')
                                               ->limit(20)
                                               ->where('user_id', Auth::user()->id);
@@ -143,6 +145,7 @@ class HomeController extends Controller
             return view('frontend.member.dashboard', compact('similar_profiles'));
         }
         else {
+            
             abort(404);
         }
     }

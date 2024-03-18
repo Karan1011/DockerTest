@@ -730,6 +730,7 @@ $.fn.toggleAttr = function (attr, attr1, attr2) {
         initForInput: function () {
             $(document).on("click",'[data-toggle="aizuploader"]', function (e) {
                 if (e.detail === 1) {
+                   
                     var elem = $(this);
                     var multiple = elem.data("multiple");
                     var type = elem.data("type");
@@ -755,8 +756,9 @@ $.fn.toggleAttr = function (attr, attr1, attr2) {
             $('[data-toggle="aizuploader"]').each(function () {
                 var $this = $(this);
                 var files = $this.find(".selected-files").val();
-
+               console.log("token"+AIZ.data.csrf);
                 $.post(
+                    
                     AIZ.data.appUrl + "/aiz-uploader/get_file_by_ids",
                     { _token: AIZ.data.csrf, ids: files },
                     function (data) {
